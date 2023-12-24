@@ -1,0 +1,121 @@
+<?php
+?>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Donation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 400px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        p {
+            margin-bottom: 20px;
+            color: #777;
+        }
+        .qr-code {
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .upi-list {
+            text-align: left;
+            margin-bottom: 20px;
+            list-style: none;
+            padding: 0;
+        }
+        .upi-id {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1em;
+            color: #333;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .copy-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+        .copy-button:hover {
+            background-color: #0056b3;
+        }
+        .copy-button:focus {
+            outline: none;
+        }
+    </style>
+    <script>
+        function copyUPIId(upiIdElementId) {
+            var upiId = document.getElementById(upiIdElementId).innerText;
+            var tempInput = document.createElement("input");
+            document.body.appendChild(tempInput);
+            tempInput.setAttribute("value", upiId);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            alert("UPI ID copied to clipboard: " + upiId);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://i0.wp.com/i.cybar.xyz/UPI-LOGO.webp" alt="UPI Logo">
+        </div>
+        <h2>Thank you for Donation❤️</h2>
+        <p>Your donation will help us To Alive Site</p>
+        
+        <div class="qr-code">
+            <img src="https://i0.wp.com/i.cybar.xyz/qr.webp" alt="QR Code">
+        </div>
+        <p>Scan this QR code or use the following UPI ID to donate:</p>
+        <ul class="upi-list">
+            <li class="upi-id">
+                <span>ID 1:</span>
+                <span id="upi-id1"><strong>gamedrive@airtel</strong></span>
+                <button class="copy-button" onclick="copyUPIId('upi-id1')">Copy</button>
+            </li>
+            <li class="upi-id">
+                <span>ID 2:</span>
+                <span id="upi-id2"><strong>nilmadhab187-1@okhdfcbank</strong></span>
+                <button class="copy-button" onclick="copyUPIId('upi-id2')">Copy</button>
+            </li>
+        </ul>
+  <!-- Ko-fi Gif Donation Buttons -->
+<div class="kofi-buttons">
+ <a href="https://ko-fi.com/gamedriveorg"><img src="https://i0.wp.com/i.cybar.xyz/ko-fi.gif" alt="Ko-fi Button 1"></a>
+ 
+ <a href="https://www.paypal.com/paypalme/ARUSX">
+    <img src="https://i0.wp.com/i.cybar.xyz/PayPal.webp" alt="Ko-fi Button 2"></a>     
+  
+    </div>
+</body>
+</html>
